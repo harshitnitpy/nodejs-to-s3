@@ -63,4 +63,12 @@ app.post("/", (req, res) => {
       res.send()
     }
   });
+  
+  fs.unlink(__dirname + "/upload/" + filename, (err) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //file removed from upload folder
+  })
 })
